@@ -35,17 +35,17 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || isMenuOpen
           ? 'bg-white/95 backdrop-blur-sm shadow-md'
-          : 'bg-transparent'
+          : 'bg-white/80 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none'
       }`}
     >
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* ロゴ */}
           <Link
             href="/"
-            className="text-2xl font-bold text-ranch-primary hover:text-ranch-light transition-colors"
+            className="text-xl sm:text-2xl font-bold text-ranch-primary hover:text-ranch-light transition-colors"
           >
             <span className="text-ranch-primary">鈴木牧場</span>
           </Link>

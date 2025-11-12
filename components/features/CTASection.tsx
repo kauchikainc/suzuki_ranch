@@ -15,7 +15,7 @@ export default function CTASection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section className="py-20 bg-gradient-to-br from-ranch-primary to-ranch-light relative overflow-hidden" ref={ref}>
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-ranch-primary to-ranch-light relative overflow-hidden" ref={ref}>
       {/* 背景装飾 */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl" />
@@ -29,28 +29,27 @@ export default function CTASection() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 px-4">
             お気軽にお問い合わせください
           </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
             商品に関するご質問や、牧場見学のご相談など、
-            <br />
             何でもお気軽にお問い合わせください。
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white text-ranch-primary hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-ranch-primary hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-sm sm:text-base"
             >
-              <Mail size={20} />
+              <Mail size={18} className="sm:w-5 sm:h-5" />
               メールでお問い合わせ
             </Link>
             <a
               href="tel:0123456789"
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 border-2 border-white"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 border-2 border-white text-sm sm:text-base"
             >
-              <Phone size={20} />
+              <Phone size={18} className="sm:w-5 sm:h-5" />
               0123-45-6789
             </a>
           </div>

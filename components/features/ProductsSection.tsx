@@ -44,25 +44,25 @@ export default function ProductsSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section className="py-20 bg-ranch-cream" ref={ref}>
+    <section className="py-12 sm:py-16 md:py-20 bg-ranch-cream" ref={ref}>
       <div className="container mx-auto px-4">
         {/* セクションタイトル */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-ranch-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-ranch-primary mb-3 sm:mb-4">
             おすすめ商品
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             オーガニックにこだわった、自慢の乳製品をご紹介します。
           </p>
         </motion.div>
 
         {/* 商品カード */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -89,19 +89,19 @@ export default function ProductsSection() {
                 </div>
 
                 {/* 商品情報 */}
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                <div className="p-5 sm:p-6">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">
                     {product.name}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
                     {product.description}
                   </p>
                   <Link
                     href="/products"
-                    className="inline-flex items-center text-ranch-primary hover:text-ranch-light font-semibold transition-colors group/link"
+                    className="inline-flex items-center text-sm sm:text-base text-ranch-primary hover:text-ranch-light font-semibold transition-colors group/link"
                   >
                     詳しく見る
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -118,7 +118,7 @@ export default function ProductsSection() {
         >
           <Link
             href="/products"
-            className="inline-block bg-ranch-primary hover:bg-ranch-light text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+            className="inline-block bg-ranch-primary hover:bg-ranch-light text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-sm sm:text-base"
           >
             全商品を見る
           </Link>

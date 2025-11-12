@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="pt-20">
       {/* ヒーローセクション */}
-      <section className="relative h-[400px] bg-ranch-primary">
+      <section className="relative h-[250px] sm:h-[300px] md:h-[400px] bg-ranch-primary">
         <Image
           src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1920&q=80"
           alt="鈴木牧場について"
@@ -17,21 +17,21 @@ export default function AboutPage() {
           className="object-cover opacity-30"
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">牧場について</h1>
-            <p className="text-xl">三代続く、オーガニックへのこだわり</p>
+          <div className="text-center text-white px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">牧場について</h1>
+            <p className="text-base sm:text-lg md:text-xl">三代続く、オーガニックへのこだわり</p>
           </div>
         </div>
       </section>
 
       {/* 代表挨拶 */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-ranch-primary mb-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-ranch-primary mb-6 sm:mb-8 text-center">
               代表挨拶
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               <div className="md:col-span-1">
                 <div className="relative h-80 rounded-lg overflow-hidden">
                   <Image

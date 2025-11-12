@@ -69,7 +69,7 @@ export default function HeroSlider() {
   }
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-[60vh] sm:h-[70vh] md:h-screen w-full overflow-hidden">
       {/* スライド画像 */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -104,22 +104,22 @@ export default function HeroSlider() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-6"
             >
-              <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white drop-shadow-lg px-4">
                 {slides[currentSlide].title}
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 drop-shadow-md">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 drop-shadow-md px-4">
                 {slides[currentSlide].subtitle}
               </p>
-              <div className="flex gap-4 justify-center mt-8">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-6 sm:mt-8 px-4">
                 <a
                   href="/products"
-                  className="bg-ranch-primary hover:bg-ranch-light text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="bg-ranch-primary hover:bg-ranch-light text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-center text-sm sm:text-base"
                 >
                   商品を見る
                 </a>
                 <a
                   href="/about"
-                  className="bg-white/90 hover:bg-white text-ranch-primary px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="bg-white/90 hover:bg-white text-ranch-primary px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-center text-sm sm:text-base"
                 >
                   牧場について
                 </a>
@@ -132,21 +132,21 @@ export default function HeroSlider() {
       {/* ナビゲーションボタン */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 p-3 rounded-full transition-all duration-300 hover:scale-110 backdrop-blur-sm"
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 backdrop-blur-sm"
         aria-label="前のスライド"
       >
-        <ChevronLeft size={32} className="text-white" />
+        <ChevronLeft size={24} className="sm:w-8 sm:h-8 text-white" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 p-3 rounded-full transition-all duration-300 hover:scale-110 backdrop-blur-sm"
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 backdrop-blur-sm"
         aria-label="次のスライド"
       >
-        <ChevronRight size={32} className="text-white" />
+        <ChevronRight size={24} className="sm:w-8 sm:h-8 text-white" />
       </button>
 
       {/* インジケーター */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 sm:gap-3">
         {slides.map((_, index) => (
           <button
             key={index}

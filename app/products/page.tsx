@@ -73,7 +73,7 @@ export default function ProductsPage() {
   return (
     <div className="pt-20">
       {/* ヒーローセクション */}
-      <section className="relative h-[400px] bg-ranch-primary">
+      <section className="relative h-[250px] sm:h-[300px] md:h-[400px] bg-ranch-primary">
         <Image
           src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=1920&q=80"
           alt="商品紹介"
@@ -81,17 +81,17 @@ export default function ProductsPage() {
           className="object-cover opacity-30"
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">商品紹介</h1>
-            <p className="text-xl">オーガニックにこだわった、自慢の乳製品</p>
+          <div className="text-center text-white px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">商品紹介</h1>
+            <p className="text-base sm:text-lg md:text-xl">オーガニックにこだわった、自慢の乳製品</p>
           </div>
         </div>
       </section>
 
       {/* こだわりポイント */}
-      <section className="py-12 bg-ranch-cream">
+      <section className="py-8 sm:py-10 md:py-12 bg-ranch-cream">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
             <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
               <div className="bg-green-100 p-3 rounded-full">
                 <Leaf className="w-6 h-6 text-green-600" />
@@ -124,9 +124,9 @@ export default function ProductsPage() {
       </section>
 
       {/* 商品一覧 */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {products.map((product) => (
               <div
                 key={product.id}
