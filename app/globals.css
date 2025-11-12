@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  /* カスタムカラー */
+  --color-ranch-primary: #2d5016;
+  --color-ranch-light: #4a7c2a;
+  --color-ranch-cream: #fef9f3;
+  --color-ranch-brown: #8b6f47;
+  --color-ranch-gold: #d4af37;
+
+  /* アニメーション */
+  --animate-fade-in: fade-in 0.8s ease-in-out;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-slide-in-left: slide-in-left 0.6s ease-out;
+  --animate-slide-in-right: slide-in-right 0.6s ease-out;
+  --animate-scale-in: scale-in 0.5s ease-out;
+
+  /* キーフレーム */
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+* {
+  border-color: theme(colors.gray.200);
+}
+
+body {
+  background-color: white;
+  color: theme(colors.gray.900);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* カスタムユーティリティ */
+.text-balance {
+  text-wrap: balance;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

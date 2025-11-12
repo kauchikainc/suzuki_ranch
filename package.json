@@ -1,0 +1,38 @@
+{
+  "name": "suzuki_ranch",
+  "version": "1.0.0",
+  "description": "鈴木牧場 - オーガニック牛乳とチーズのホームページ",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "next.js",
+    "ranch",
+    "organic",
+    "dairy"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^16.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.2",
+    "autoprefixer": "^10.4.22",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.553.0",
+    "microcms-js-sdk": "^3.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
+  }
+}
